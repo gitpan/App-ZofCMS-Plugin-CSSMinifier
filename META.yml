@@ -1,0 +1,22 @@
+---
+name: App-ZofCMS-Plugin-CSSMinifier
+version: 0.0101
+author:
+  - "'Zoffix <'zoffix@cpan.org'>"
+abstract: plugin for minifying CSS files
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  App::ZofCMS::Plugin::Base: 0.0103
+  CSS::Minifier: 0.01
+build_requires:
+  Test::More: 0
+provides:
+  App::ZofCMS::Plugin::CSSMinifier:
+    file: lib/App/ZofCMS/Plugin/CSSMinifier.pm
+    version: 0.0101
+generated_by: Module::Build version 0.280801
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
