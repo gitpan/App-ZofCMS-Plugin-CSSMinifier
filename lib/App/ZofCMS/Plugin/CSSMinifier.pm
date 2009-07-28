@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::CSSMinifier;
 use warnings;
 use strict;
 
-our $VERSION = '0.0101';
+our $VERSION = '0.0102';
 use CSS::Minifier qw/minify/;
 use base 'App::ZofCMS::Plugin::Base';
 
@@ -133,6 +133,7 @@ B<Defaults to:> C<1>
 =head1 AUTHOR
 
 'Zoffix, C<< <'zoffix at cpan.org'> >>
+(L<http://haslayout.net/>, L<http://zoffix.com/>, L<http://zofdesign.com/>)
 
 =head1 BUGS
 
