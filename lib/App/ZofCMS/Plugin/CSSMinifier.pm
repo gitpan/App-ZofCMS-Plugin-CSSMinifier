@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::CSSMinifier;
 use warnings;
 use strict;
 
-our $VERSION = '0.0103';
+our $VERSION = '0.0104';
 use CSS::Minifier qw/minify/;
 use base 'App::ZofCMS::Plugin::Base';
 
