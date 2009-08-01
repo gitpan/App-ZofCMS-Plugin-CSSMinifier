@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::CSSMinifier;
 use warnings;
 use strict;
 
-our $VERSION = '0.0102';
+our $VERSION = '0.0103';
 use CSS::Minifier qw/minify/;
 use base 'App::ZofCMS::Plugin::Base';
 
@@ -90,7 +90,20 @@ B<Mandatory>. You need to include the plugin to the list of plugins to execute.
         cache       => 1, # default value
     },
 
-B<Mandatory>. Takes a hashref as a value; individual keys can be set in both Main Config
+    plug_css_minifier => sub {
+        my ( $t, $q, $config ) = @_;
+        return {
+            file        => 'main.css',
+            auto_output => 1, # default value
+            cache       => 1, # default value
+        }
+    },
+
+B<Mandatory>. Takes or a subref as a value. If subref is specified,
+its return value will be assigned to C<plug_css_minifier> as if it was already there. If sub returns
+an C<undef>, then plugin will stop further processing. The C<@_> of the subref will
+contain (in that order): ZofCMS Tempalate hashref, query parameters hashref and
+L<App::ZofCMS::Config> object; individual keys can be set in both Main Config
 File and ZofCMS Template, if the same key set in both, the value in ZofCMS Template will
 take precedence. The following keys/values are accepted:
 
