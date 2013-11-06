@@ -16,7 +16,9 @@ my $builder = Module::Build->new(
     requires => {
         'CSS::Minifier'             => 0.01,
         'App::ZofCMS::Plugin::Base' => 0.0103,
+        perl                        => 5.006,
     },
+    configure_requires => { 'Module::Build' => 0 },
     add_to_cleanup      => [ 'App-ZofCMS-Plugin-CSSMinifier-*' ],
     create_makefile_pl => 'traditional',
 );

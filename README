@@ -1,6 +1,7 @@
 App-ZofCMS-Plugin-CSSMinifier
 
-The module is a plugin for L<App::ZofCMS> that provides means to send minified CSS files.
+The module is a plugin for L<App::ZofCMS> that provides
+means to send minified CSS files.
 
 INSTALLATION
 
